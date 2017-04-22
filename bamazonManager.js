@@ -43,7 +43,7 @@ exports.manager = function(){
             connection.query("SELECT * FROM products", function (err, res) {
                 console.log("");
                 $.each(res, function (i, val) {
-                    console.log("SKU: " + val.item_id + ", Product Name: " + val.product_name + ", Price: " + val.price, "Quantity Available: " + val.stock_quantity, "Total Product Sales:" + val.product_sales);
+                    console.log("SKU: " + val.item_id + ", Product Name: " + val.product_name + ", Price: " + val.price, ", Quantity Available: " + val.stock_quantity, ", Total Product Sales:" + val.product_sales);
                 });
             });
             bamazon.startProgram();
@@ -55,7 +55,7 @@ exports.manager = function(){
                     console.log("Nothing is below 5 units!")
                 }
                 $.each(res, function (i, val) {
-                    console.log("Item ID: " + val.item_id + ", Product Name: " + val.product_name + ", Price: " + val.price, "Quantity Available: " + val.stock_quantity, "Total Product Sales:" + val.product_sales);
+                    console.log("Item ID: " + val.item_id + ", Product Name: " + val.product_name + ", Price: " + val.price, ", Quantity Available: " + val.stock_quantity, ", Total Product Sales:" + val.product_sales);
                 });
             });
             setTimeout(function(){
